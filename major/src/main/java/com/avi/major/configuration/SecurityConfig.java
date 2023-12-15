@@ -28,10 +28,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.authorizeRequests()
             .antMatchers("/h2-console/**").permitAll() // Allow access to H2 console
 			.antMatchers("/", "/shop/**", "/register", "/h2-consol/**").permitAll()
-			//.antMatchers("/admin/**").hasRole("ADMIN")
+			.antMatchers("/adminHome/**").hasRole("ADMIN")
 			//.antMatchers("/admin/**").hasRole("ADMIN")
             //.antMatchers("/admin/**").hasAuthority("ADMIN")
-			.antMatchers("/admin/**").authenticated()
+			//.antMatchers("/admin/**").authenticated()
 
 			//.anyRequest()
 			//.authenticated()
